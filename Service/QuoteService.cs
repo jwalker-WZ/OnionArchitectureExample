@@ -7,6 +7,12 @@ using Repository;
 
 namespace Service
 {
+    /*
+     * specific implementation for quotes
+     * 
+     * The default implementation would work as well since there are no extra functions defined
+     * 
+     */
     public class QuoteService : IService<Quote>
     {
 

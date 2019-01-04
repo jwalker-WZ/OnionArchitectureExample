@@ -6,6 +6,9 @@ using System.Text;
 
 namespace Repository
 {
+    /*
+     * The repository interface. Constrained to the IEntity class 
+     */
     public interface IRepository<T> where T : IEntity
     {
         IEnumerable<T> GetAll();

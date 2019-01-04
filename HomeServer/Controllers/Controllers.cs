@@ -11,6 +11,13 @@ using Service;
 
 namespace HomeServer.Controllers
 {
+    /*
+     * Here are all the controller classes for the different types. Due to
+     * the generics most of the functionality is shared and as I don't have
+     * more functionality than the basics for this example I've placed them
+     * all in the same file. In most cases each class would be in it's own
+     * file.
+     */
     [Route("api/[controller]/[action]")]
     [ApiController]
     public class BookController : HomeServerBaseController<Book>

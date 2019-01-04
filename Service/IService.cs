@@ -5,6 +5,7 @@ using System.Text;
 
 namespace Service
 {
+    //Generic service interface, constrained to IEntity class
     public interface IService<T> where T : IEntity
     {
         IEnumerable<T> Get();

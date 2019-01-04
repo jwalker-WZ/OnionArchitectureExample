@@ -8,6 +8,11 @@ using System.Text;
 
 namespace Repository
 {
+    /*
+     * This is the application context that is created for the entire project
+     * In it I declare the different database tables (DbSet) as well as change
+     * the default naming.
+     */
     public class AppContext : DbContext
     {
         public AppContext(DbContextOptions<AppContext> options) : base(options)
@@ -23,6 +28,7 @@ namespace Repository
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //This changes the default naming. Normaly the tables would be plurals.
             modelBuilder.Entity<Book>().ToTable("Book");
             modelBuilder.Entity<Quote>().ToTable("Quote");
             modelBuilder.Entity<ItemColor>().ToTable("ItemColor");

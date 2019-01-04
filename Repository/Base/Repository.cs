@@ -8,6 +8,9 @@ using System.Text;
 
 namespace Repository
 {
+    /*
+     * Default implementation of the IRepository interface.
+     */
     public class Repository<T> : IRepository<T> where T : IEntity
     {
         protected readonly AppContext context;

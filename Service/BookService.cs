@@ -6,6 +6,12 @@ using Repository;
 
 namespace Service
 {
+    /*
+     * specific implementation for books
+     * 
+     * The default implementation would work as well since there are no extra functions defined
+     * 
+     */
     public class BookService : IService<Book>
     {
         private IRepository<Book> _repository;

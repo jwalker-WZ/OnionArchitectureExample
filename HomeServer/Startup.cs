@@ -34,11 +34,13 @@ namespace HomeServer
             services.AddDbContext<Repository.AppContext>(options =>
                                     options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+            //add the repositories for DI
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped(typeof(IRepository<Book>), typeof(BookRepository));
             services.AddScoped(typeof(IRepository<Quote>), typeof(QuoteRepository));
             services.AddScoped(typeof(IRepository<InventoryItem>), typeof(InventoryItemRepository));
 
+            //add the services for DI
             services.AddTransient(typeof(IService<>), typeof(BaseService<>));
             services.AddTransient(typeof(IService<Book>), typeof(BookService));
             services.AddTransient(typeof(IService<Quote>), typeof(QuoteService));

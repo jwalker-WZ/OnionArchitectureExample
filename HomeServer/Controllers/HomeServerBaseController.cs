@@ -8,6 +8,13 @@ using System.Threading.Tasks;
 
 namespace HomeServer.Controllers
 {
+    /*
+     * All controllers inherit from from this base controller, which handles
+     * all of the default functionality. As you can see the API controller
+     * simply wraps up each of the functions defined in the service. This is
+     * the "presentation" layer, but since this is an API and WebAPI handles
+     * alot of the stuff for us there isn't much code here.
+     */
     public class HomeServerBaseController<T> : ControllerBase where T : IEntity
     {
         IService<T> _service;

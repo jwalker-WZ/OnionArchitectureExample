@@ -6,6 +6,7 @@ using System.Text;
 
 namespace Service
 {
+    //Default implementation of the generic service
     public class BaseService<T> : IService<T> where T : IEntity
     {
         IRepository<T> _repository;
